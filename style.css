@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('./assets/fonts/Gilroy-Semibold.ttf');
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Gilroy;
+}
+button {
+    cursor: pointer;
+}
+button:hover {
+    animation: upDown .8s ease infinite;
+}
+main {
+    width: 90%;
+    margin: 40px auto;
+}
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+.heading h1 {
+    font-size: 48px;
+}
+.actions {
+    display: flex;
+    gap: 8px;
+}
+.actions button {
+    border-radius: 10px;
+    background: transparent;
+    padding: 17px 45px;
+    border: 1px solid #000000;
+    font-size: 18px;
+}
+.container {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.box__screen {
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.box__screen img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+.box__description {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    padding: 30px;
+    gap: 10px;
+    /* height: 100%; */
+}
+.box__description h4 {
+    font-size: 24px;
+}
+.box__description p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.56);
+}
+.box__description .rating span {
+    font-size: 24px;
+}
+
+.box__description .rating {
+    display: flex;
+    gap: 10px;
+}
+.box__description .box__btn {
+    width: 100%;
+}
+.box__description .box__btn button {
+    width: 100%;
+    padding: 17px 68px;
+    border: 1px solid black;
+    background: white;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.box__btn button:hover {
+    animation-name: shake;
+    animation-iteration-count: infinite;
+    animation-duration: .4s;
+    animation-timing-function: ease;
+}
+@keyframes upDown {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, -5px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-1deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
